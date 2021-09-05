@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Number Game</title>
+
+
+</head>
+
+<body>
+  <main>
+    <!-- <button class="show-modal">Show modal 1</button> -->
+    <section class="player player-1 invert">
+      <h2 class="name" id="name-1"> Player 2</h2>
+
+      <p class="score" id="score-1">43</p>
+      <div class="current">
+        <p class="current-label">Current</p>
+        <p class="current-score" id="current-1">0</p>
+      </div>
+      <div class="buttons">
+        <button class="btn btn-roll ">Roll</button>
+        <button class="btn btn-hold ">Hold</button>
+      </div>
+    </section>
+
+    <section class="player player-0 player-active">
+      <h2 class="name" id="name-0"> Player 1</h2>
+      <p class="score" id="score-0">24</p>
+      <div class="current">
+        <p class="current-label">Current</p>
+        <p class="current-score" id="current-0">0</p>
+      </div>
+      <div class="buttons">
+        <button class="btn btn-roll">Roll</button>
+        <button class="btn btn-hold">Hold</button>
+      </div>
+
+    </section>
+
+    <img src="img/dice-1.png" alt="Playing dice" class="dice" />
+
+
+    <div class="modal hidden">
+
+      <button class="close-modal">&times;</button>
+      <h1>Instructions</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+
+      </p>
+      <button class="btn" id="rematch">Rematch</button>
+
+      <div class="overlay hidden"></div>
+    </div>
+  </main>
+
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

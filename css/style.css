@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  /* background: black; */
+  background-image: linear-gradient(
+    to left bottom,
+    #222831,
+    #2a3d4d,
+    #2c5569,
+    #276e84,
+    #1a889c,
+    #1f8a9e,
+    #248da0,
+    #288fa2,
+    #37798f,
+    #3e6478,
+    #3f505f,
+    #393e46
+  );
+  color: #fff;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+img {
+  border-radius: 1em;
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  /* top: 45%; */
+  transform: translateX(-50%);
+  height: 10vh;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.player {
+  background: #222831;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  flex-direction: column;
+  padding: 1em;
+  margin: 1em;
+}
+
+.invert {
+  /* transform: scaleX(-1); */
+  transform: rotate(180deg);
+  /* transform: rotateX(180deg); */
+}
+
+.player-1 {
+  /* transform: scaleX(-1); */
+  height: 50vh;
+  top: 1em;
+  border-radius: 1em;
+  /* Flip card */
+  margin-bottom: 0;
+  /* transform: rotateX(180deg); */
+}
+
+.player-0 {
+  height: 50vh;
+  bottom: 1em;
+  border-radius: 1em;
+}
+
+.name {
+  /* background: red; */
+
+  font-size: 1.8em;
+}
+
+.score {
+  /* background: green; */
+
+  font-size: 5rem;
+  font-weight: 300;
+  color: #1a889c;
+  /* margin-bottom: auto; */
+}
+
+.current {
+  /* background: purple; */
+
+  background-color: #2a3d4d;
+  /* opacity: 0.8; */
+  border-radius: 1em;
+
+  /* width: 65%; */
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  transition: all 0.75s;
+}
+
+.current-label {
+  text-transform: uppercase;
+  /* margin-bottom: 1rem; */
+  /* font-size: 1.7rem; */
+  color: #ddd;
+}
+
+.current-score {
+  /* font-size: 3.5rem; */
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  color: #444;
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 0.7rem 1.5rem;
+  border-radius: 1em;
+}
+
+/* Player active */
+.player-active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.player-active .name {
+  font-weight: 700;
+}
+.player-active .score {
+  font-weight: 400;
+}
+
+.player-active .current {
+  opacity: 1;
+}
+.container {
+  display: flex;
+}
+.winner {
+  /* padding: 1em; */
+}
+
+.player-winner {
+  position: absolute;
+  font-weight: 700;
+  color: #c7365f;
+  background: #38a3a5 !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 90%;
+  width: 83%;
+  margin: 0;
+}
+.show-modal {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+/* background: #222831;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  flex-direction: column;
+  padding: 1em;
+  margin: 1em; */
+
+.modal {
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  /* width: 70%; */
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; */
+  position: absolute;
+
+  text-align: left;
+
+  height: 90vh;
+  margin: 1rem;
+  /* width: 70%; */
+  background-color: green;
+  padding: 1em;
+  /* margin: 0; */
+
+  border-radius: 1em;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.overlay {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5; */
+}
